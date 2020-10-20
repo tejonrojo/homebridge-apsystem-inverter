@@ -1,0 +1,27 @@
+{
+  "name": "homebridge-apsystem-inverter",
+  "version": "0.1.0",
+  "description": "A Homebridge plugin to collect AP Systems solar inverter data and show it into HomeKit as a light sensor accessory. It shows current watts generation and total kwh by day.",
+  "author": "Nathan Ortiz",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tejonrojo/homebridge-apsystem-inverter"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "axios-cache-adapter": "^2.5.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "homebridge-plugin" ,
+    "AP Systems",
+    "Inverter",
+    "Solar Panel"
+  ],
+  "engines": {
+    "homebridge": ">=0.2.0",
+    "node": ">=0.12.0"
+  },
+  "license": "MIT",
+  "main": "index.js"
+}
