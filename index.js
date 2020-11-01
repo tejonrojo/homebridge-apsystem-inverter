@@ -30,6 +30,10 @@ const api = axios.create({
   timeout: 2000
 })
 
+function zformat_number2(n)
+{
+	return n > 9 ? ""+n:"0"+n;
+}
 
 /**
  * Main API request with all data
@@ -40,7 +44,9 @@ const getInverterData = async(ecuId) => {
 	try {
 
 		let current_datetime = new Date();
-		let formatted_date = "" + current_datetime.getFullYear() + (current_datetime.getMonth() + 1)  +current_datetime.getDate() ;
+		let day = zformat_number2(current_datetime.getDate());
+	        let month = zformat_number2(current_datetime.getMonth() + 1);		 
+		let formatted_date = "" + current_datetime.getFullYear() + month + day;
 		let params = 'filter=power&ecuId='+ecuId+'&date='+formatted_date;
 		console.log(params);
 	    return await api({
